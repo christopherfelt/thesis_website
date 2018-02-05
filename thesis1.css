@@ -69,18 +69,10 @@ html, body {
   padding-left: 20%;
   padding-right: 20%;
   z-index: 10;
+  background-color: white;
 
 }
 
-.footer {
-  box-sizing: border-box;
-  position: fixed;
-  top: 20%;
-  right: 0;
-  width: 20%;
-  text-align: center;
-
-}
 
 .main_text {
   line-height: 160%;
@@ -89,7 +81,7 @@ html, body {
 
 
 
-#All_Shapes {
+#all_shapes {
   border: solid black;
   margin: auto;
   height: 400px;
@@ -126,6 +118,13 @@ html, body {
   0%, 100% {opacity: .0}
   50% {opacity: 1}
 
+}
+
+#counties {
+  border: solid black;
+  margin: auto;
+  height: 400px;
+  width: 400px;
 }
 
 /* Manual/Blueprint Slide Show */
@@ -443,19 +442,37 @@ html, body {
 }
 
 
-#Figure1 {
+#change_image {
   border: solid black;
   margin: auto;
   height: 400px;
   width: 400px;
 }
 
-#Figure2 {
+#landuse {
   border: solid black;
   margin: auto;
   height: 400px;
   width: 400px;
 }
+
+#impact_area {
+  border: solid black;
+  margin: auto;
+  height: 400px;
+  width: 400px;
+}
+
+.footer {
+  box-sizing: border-box;
+  position: fixed;
+  top: 20%;
+  right: 0;
+  width: 20%;
+  text-align: center;
+
+}
+
 
 /* .footer {
   display: none;
