@@ -1,0 +1,495 @@
+html, body {
+  padding: 0;
+  margin: 0px;
+  border: 0;
+}
+
+.grid {
+  display: grid;
+  position: absolute;
+  bottom: 0%;
+  height: 80%;
+  grid-template-columns: 1fr 60% 1fr;
+  /* margin-top: 10%; */
+}
+
+/* .box {
+  background-color: beige;
+  color: black;
+  border-radius: 5px;
+  border: 2px dodgerblue solid;
+} */
+
+.oldboise {
+  position: fixed;
+  width: 100%;
+  height: auto;
+}
+
+.oldboise img {
+  width: 100%;
+  height: auto;
+  opacity: .24;
+}
+
+
+
+.toc {
+  /* grid-column: 1 / span 1; */
+  text-align: center;
+  position: fixed;
+  top: 20%;
+  z-index: 2;
+  width: 20%
+
+}
+
+
+.center_container {
+  grid-column: 2 /span 1;
+  box-sizing: border-box;
+}
+
+.contents {
+  width: 70%;
+  text-align: center;
+  /* border: dashed; */
+  margin: auto;
+  padding-top: 5%;
+}
+
+.header {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  height: 20%;
+  text-align: center;
+  z-index: 1;
+  padding-left: 20%;
+  padding-right: 20%;
+  z-index: 10;
+
+}
+
+.footer {
+  box-sizing: border-box;
+  position: fixed;
+  top: 20%;
+  right: 0;
+  width: 20%;
+  text-align: center;
+
+}
+
+.main_text {
+  line-height: 160%;
+
+}
+
+
+
+#All_Shapes {
+  border: solid black;
+  margin: auto;
+  height: 400px;
+  width: 400px;
+}
+
+/* Automatic/City Limit Slide Show */
+.imgDiv {
+  border: solid black;
+  height: 600px;
+  margin: auto;
+}
+
+.mySlides, .counties {
+  width: 50%;
+  height: auto;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.text_slides {
+  display: none;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 4s;
+}
+
+@keyframes fade {
+  0%, 100% {opacity: .0}
+  50% {opacity: 1}
+
+}
+
+/* Manual/Blueprint Slide Show */
+.blueprint_section {
+  box-sizing: border-box;
+  border: solid darkblue;
+  width: 100%;
+  height: 400px;
+  position: relative;
+  background: lightblue;
+}
+
+#blueprint_logo{
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 37%;
+  /* right: 34%; */
+  right: 13%;
+  z-index: 1;
+  /* border: solid; */
+}
+
+.first_slide {
+  display: block;
+  text-align: left;
+  width: 50%;
+  position: absolute;
+  top: 30%;
+  font-weight: bold;
+  opacity: 1;
+}
+
+/* second slide classes and ids */
+.second_slide {
+  display: none;
+  opacity: 1;
+}
+
+#achd, #compass {
+  box-sizing: border-box;
+  position: absolute;
+  /* border: solid; */
+  left: 10%;
+}
+
+#achd {
+  top: 10%;
+}
+
+#achd img {
+  width: 200px;
+  height: auto;
+}
+
+#achd_arrow {
+  box-sizing: border-box;
+  position: absolute;
+  /* border: solid; */
+  font-size: 100px;
+  left: 40%;
+}
+
+#compass {
+    bottom: 10%;
+}
+
+#compass img {
+  width: auto;
+  height: 150px;
+
+}
+
+#compass_arrow {
+  box-sizing: border-box;
+  position: absolute;
+  /* border: solid; */
+  font-size: 100px;
+  left: 40%;
+  bottom: 0;
+}
+
+/* third slide classes and ids */
+
+.third_slide {
+  display: none;
+
+}
+
+#third_slide_list {
+  text-align: left;
+  width: 50%;
+  position: absolute;
+  top: 25%;
+  font-weight: bold;
+}
+
+#third_slide_arrow {
+  position: absolute;
+  top: 15%;
+  left: 40%;
+  font-size: 100px;
+}
+
+/* fourth slide classes and ids */
+
+.fourth_slide {
+  display: none;
+}
+
+#fourth_slide_list {
+  text-align: left;
+  width: 50%;
+  position: absolute;
+  top: 25%;
+  font-weight: bold;
+}
+
+/* fifth slide classes and ids */
+
+.fifth_slide {
+  display: none;
+}
+
+#eagle {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+}
+
+#eagle img {
+  width: 100px;
+  height: auto;
+}
+
+#eagle_arrow {
+  position: absolute;
+  top: 10%;
+  left:20%;
+  font-size: 100px;
+}
+
+#kuna {
+  position: absolute;
+  top: 37%;
+  left: 1%;
+}
+
+#kuna img {
+  width: 100px;
+  height: auto;
+}
+
+#kuna_arrow {
+  position: absolute;
+  top: 20%;
+  left:15%;
+  font-size: 100px;
+}
+
+#star {
+  position: absolute;
+  top: 75%;
+  left: 5%;
+}
+
+#star img {
+  width: 100px;
+  height: auto;
+}
+
+#star_arrow {
+  position: absolute;
+  top: 35%;
+  left:20%;
+  font-size: 100px;
+}
+
+#ada {
+  /* display: inherit; */
+  position: absolute;
+  bottom: 1%;
+  left: 43%;
+  /* left: 66%; */
+}
+
+#ada img {
+  width: 100px;
+  height: auto;
+}
+
+#ada_arrow {
+  /* display: inherit; */
+  position: absolute;
+  bottom: 5%;
+  left:47%;
+  /* left: 70%; */
+  font-size: 100px;
+}
+
+#meridian {
+  position: absolute;
+  top: 75%;
+  right: 5%;
+}
+
+#meridian img {
+  width: 100px;
+  height: auto;
+}
+
+#meridian_arrow {
+  position: absolute;
+  top: 35%;
+  right:20%;
+  font-size: 100px;
+}
+
+#garden_city {
+  position: absolute;
+  top: 43%;
+  right: 0;
+}
+
+#garden_city img {
+  width: 100px;
+  height: auto;
+}
+
+#garden_city_arrow {
+  position: absolute;
+  top: 20%;
+  right:15%;
+  font-size: 100px;
+}
+
+#boise {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+}
+
+#boise img {
+  width: 100px;
+  height: auto;
+}
+
+#boise_arrow {
+  position: absolute;
+  top: 10%;
+  right:20%;
+  font-size: 100px;
+}
+
+.sixth_slide {
+  display: none;
+}
+
+#sixth_slide_list{
+  text-align: left;
+  width: 50%;
+  position: absolute;
+  top: 25%;
+  font-weight: bold;
+}
+
+.slide_show_paragraphs {
+  box-sizing: border-box;
+  border: solid darkblue;
+  width: 100%;
+  height: 100px;
+  position: relative;
+  background: lightblue;
+}
+
+.dot {
+  cursor:pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+#slideShowButLeft {
+  position: absolute;
+  left: 0;
+  height: 50px;
+}
+
+#slideShowButRight {
+  position: absolute;
+  right: 0;
+  height: 50px;
+}
+
+.blueprint_text_slides {
+  display: none;
+}
+
+.data {
+  background: lightblue;
+  border: solid darkblue;
+}
+
+.data h4 {
+  text-align: left;
+  margin-left: 5%;
+}
+
+.data ul li{
+  text-align: left;
+}
+
+
+#Figure1 {
+  border: solid black;
+  margin: auto;
+  height: 400px;
+  width: 400px;
+}
+
+#Figure2 {
+  border: solid black;
+  margin: auto;
+  height: 400px;
+  width: 400px;
+}
+
+/* .footer {
+  display: none;
+} */
+
+@media screen and (max-width: 1325px){
+  .header h1{
+    font-size: 140%;
+  }
+}
+
+@media screen and (max-width: 644px){
+  .header h1{
+    font-size: 100%;
+  }
+}
+
+@media screen and (max-width: 1390px){
+  .toc{
+    top: 80%;
+    bottom: 0;
+    width: 100%;
+  }
+
+
+
+  /* .grid {
+    display: block;
+  } */
+
+}
+
+
+/*TODO Media Queries  */
+/* Turn off table of contents when orientation is portrait and  */
+
+/* Need to think about all of the different devies especially tablets and mobile */

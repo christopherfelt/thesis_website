@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Thesis</title>
+    <!-- <link rel="stylesheet" href="featurelayertest1.css"> -->
+    <link rel="stylesheet" href="https://js.arcgis.com/4.6/esri/css/main.css">
+    <link rel="stylesheet" href="thesis1.css">
+  </head>
+  <body>
+    <div class="oldboise">
+      <img src="oldboise.jpg" alt="">
+    </div>
+
+    <div class="box header">
+      <h1>MODELING THE DRIVERS OF LAND USE CHANGE IN ADA COUNTY AND CANYON COUNTY, IDAHO, USING A REGRESSION DISCONTINUITY DESIGN</h1>
+
+    </div>
+
+    <div class="box toc">
+
+
+        <h3>Abstract</h3>
+        <h3>Understanding Land Use Change </h3>
+        <h3>Study Area</h3>
+        <h4>Blueprint for Good Growth</h4>
+        <h3>Theory and Hypothesis</h3>
+        <h3>Data</h3>
+        <h3>Method</h3>
+          <h4>Regression Discontinuity Design</h4>
+          <h4>Models</h4>
+        <h3>Results</h3>
+        <h3>Discussion </h3>
+        <h3>Conclusion </h3>
+
+
+    </div>
+
+    <div class="grid">
+
+      <div class="box center_container">
+
+        <div class = "box contents">
+
+  ABSTRACT: <br>
+  Urbanization and land use change are widespread phenomena and the primary drivers of global ecological change. Researchers from both the social and natural sciences have investigated the effects that land use change has on environmental services and the effectiveness of regulatory bodies in mitigating its harmful impacts. Although there is research on local governmental bodies and their effectiveness in controlling land use change, county governments have often been overlooked. In this article, I study the effectiveness of county governments in controlling land use change using a regression discontinuity design (RDD). The RDD is a quasi-experimental approach that provides stronger support for claims of causality than basic regression analysis. I use the RDD along with multinomial and binary logit estimation to study the capacity of the Ada County government to control land use change in the Treasure Valley, Idaho.
+
+<br>
+<br>
+<br>
+
+  <div id="All_Shapes">
+
+  </div>
+
+
+
+<br>
+<br>
+<br>
+
+<!-- <div class="main_text"> -->
+  <h3>UNDERSTANDING LAND USE CHANGE:</h3>
+  <br><br>
+  There is a substantial amount of research that looks at land use change. Some of this research examines the impact that land use change has on the environment. These impacts include disruptions in ecological function and the discharging of waste in the environment. Other land use change research looks at efforts to mitigate these impacts using regulatory tools by local governments. The tools that are most often used are zoning and adequate facilities provision ordinances. Much of this latter kind of land use change research has looked at the implementation of these regulatory tool within city boundaries. However, it is not always the case that land use change occurs within the jurisdiction of the city.
+
+<br>
+<br>
+
+  <div class="imgDiv">
+
+    <h3>Treasure Valley</h3>
+
+    <img class="mySlides fade" src="TV2000.png" alt="">
+    <img class="mySlides fade" src="TV2001-2006.png" alt="">
+    <img class="mySlides fade" src="TV2006.png" alt="">
+    <img class="mySlides fade" src="TV2006-2011.png" alt="">
+    <img class="mySlides fade" src="TV2006-2011circles.png" alt="">
+
+
+
+    <p class = "text_slides">City Limits: 2000 <br>
+  Take for example the land use change that occured in the Treasure Valley from 2001-2011. Starting with the image of west Ada County which includes the city Meridian and Eagle. <br>
+    </p>
+
+    <p class = "text_slides">Development: 2001-2006 <br>
+  The second image shows the development that occured for the period from 2001-2006. As you can see there is a substantial amount of development that occurred outside the city limits of Eagle and Meridian.
+    </p>
+
+    <p class = "text_slides">City Limits: 2006 <br>
+  The third image shows the expanded city limits for Meridian and Eagle that incorporate the new development. <br>
+    </p>
+
+    <p class = "text_slides">City Limits: 2006-2011 <br>
+  The fourth image shows development from 2006-2011.<br>
+    </p>
+
+    <p class = "text_slides">City Limits: 2006-2011 <br>
+  This final image show a few spots where new development occured outside of the city limits. <br>
+    </p>
+
+  </div>
+
+<br><br><br>
+
+    <p>Since we can see that there was a substantial amount of the development outside of the city limits boundaries we need to zoom out and consider the local government body that s responsible for these areas. In this case, that is the county government.</p><br>
+
+    <img class="counties" src="counties.png" alt=""><br>
+
+    <p>The previous research on land use change that have looked at county governments have found that the county government land use regulations have effectively controlled sprawling land use development.</p><br>
+
+    <p>However, some researchers have found that not all county government are the same. This issue makes it difficult to generalize the results from one county to another. But they exhibit two types of patterns in terms of scope of power. The first pattern consists of strong county governments that share land use change regulation responsibilities with a single large municipal government. The second pattern is a county government that is responsible for the unincorporated areas and then shares responsibilities in certain areas with several different smaller municipalities.</p><br>
+
+    <p>d.	The previous research has focused on the first pattern of county government. That is, the strong county government that shares regulatory responsibilities with a large municipality. This focus has been at the expense of understanding the second pattern.</p><br>
+
+    <p>This leads me to my contribution which is that I look at the county government that fits the second pattern and see if it is an effective driver of land use change. Additionally, I use the regression discontinuity design which provides better support for causal claims than basic regression analysis.  I will review the RDD when I discuss my data and methods.</p><br>
+
+    <p>The area that I look at in my research is the Treasure Valley. And the treasure valley offer an excellent opportunity to study land use change regulation because the two counties, Ada and Canyon, are set up like natural experiment. For instance, since both counties are in the Treasure Valley, they can be expected to share many environmental and geographic qualities. The way in which the two counties differ is in their planning activities. For the period that I am looking, 2001 to 2011, Ada County has been active in developing plans for future development whereas canyon county has been much less active. Therefore, since the two counties share similar environmental and geographic qualities, we potentially can attribute the difference in land use change between the two counties to planning activities. </p><br>
+
+
+
+<!-- </div> -->
+
+
+<br><br>
+
+  <div class="blueprint_section">
+    <div id="blueprint_logo">
+      <img src="blueprint_logo.png" alt="">
+    </div>
+    <div class="first_slide">
+      <ul>
+        <li>Blueprint for Good Growth</li>
+          <ul>
+              <li>Developed for implementation in Ada County and the cities within it.</li>
+          </ul>
+      </ul>
+    </div>
+    <div class="second_slide fade_in">
+      <div id="achd">
+        <img src="achd.jpg" alt="">
+      </div>
+      <div id="achd_arrow">
+        <p>&#x2198;</p>
+      </div>
+      <div id="compass">
+        <img src="compass.png" alt="">
+      </div>
+      <div id="compass_arrow">
+        <p>&#x2197;</p>
+      </div>
+    </div>
+    <div class="third_slide">
+      <ul id="third_slide_list">
+        <li>Sterring Committee</li>
+          <ul>
+            <li>City Government*</li>
+            <li>Ada County Government*</li>
+            <li>Compass*</li>
+            <li>Developers</li>
+            <li>Large Employers</li>
+            <li>Community Leaders</li>
+          </ul>
+      </ul>
+      <div id="third_slide_arrow">
+        <p>&#x2192;</p>
+      </div>
+    </div>
+    <div class="fourth_slide">
+      <ul id="fourth_slide_list">
+        <li>Overarching Land Use Goal</li>
+          <ul>
+            <li>Reduce Sprawl</li>
+            <li>Policies</li>
+              <ul>
+                <li>No development in unincorporated areas</li>
+                <li>Contain development within impact areas</li>
+              </ul>
+          </ul>
+      </ul>
+    </div>
+    <div class="fifth_slide">
+      <div id="eagle">
+        <img src="eagle.jpg" alt="">
+      </div>
+      <div id="eagle_arrow">
+        <p>&#x2196;</p>
+      </div>
+      <div id="kuna">
+        <img src="kuna.jpg" alt="">
+      </div>
+      <div id="kuna_arrow">
+        <p>&#x2190;</p>
+      </div>
+      <div id="star">
+        <img src="star.jpg" alt="">
+      </div>
+      <div id="star_arrow">
+        <p>&#x2199;</p>
+      </div>
+      <div id="ada">
+        <img src="ada.jpg" alt="">
+      </div>
+      <div id="ada_arrow">
+        <p>&#x2193;</p>
+      </div>
+      <div id="meridian">
+        <img src="meridian.jpg" alt="">
+      </div>
+      <div id="meridian_arrow">
+        <p>&#x2198;</p>
+      </div>
+      <div id="garden_city">
+        <img src="gardencity.jpg" alt="">
+      </div>
+      <div id="garden_city_arrow">
+        <p>&#x2192;</p>
+      </div>
+      <div id="boise">
+        <img src="boise.jpg" alt="">
+      </div>
+      <div id="boise_arrow">
+        <p>&#x2197;</p>
+      </div>
+    </div>
+
+    <div id="ada" class="fifth_slide">
+      <img src="ada.jpg" alt="">
+    </div>
+    <div id="ada_arrow" class="fifth_slide">
+      <p>&#x2193;</p>
+    </div>
+
+  <div class="sixth_slide">
+    <ul id="sixth_slide_list">
+      <li>Incorporated in Ada County planning policies in 2007</li>
+    </ul>
+  </div>
+
+
+
+  </div>
+
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+</div>
+
+
+  <div class="slide_show_paragraphs">
+
+
+    <button id="slideShowButLeft" onclick="nextSlide(-1, true); plusSlides(-1)">&#10094;</button>
+    <button id="slideShowButRight" onclick="nextSlide(1, false); plusSlides(1)">&#10095;</button>
+
+    <p class = "blueprint_text_slides">
+      Blueprint for Good Growth <br>
+      a.	One important set of land use change policies for Ada County is called the Blueprint for Good Growth. The Blueprint is important because it represents a coordinated effort between many different government bodies to develop land use change policy that focuses on Ada County and the cities within it. The Blueprint included policies that were to be specifically implemented by Ada County and the municipal governments.  During this same period, there wasn’t anything similar being developed for Canyon County.
+    </p>
+    <p class = "blueprint_text_slides">
+      Blueprint Development: 2004 - 2006 <br>
+      The development of the Blueprint started in 2004. The initial development consisted of incorporating previous planning initiatives from the Ada County Highway District and COMPASS, the local non-profit planning association.
+    </p>
+    <p class = "blueprint_text_slides">
+      Blueprint Development: 2004 - 2006 <br>
+      Additionally, the development of the Blueprint incorporated input from several different groups of stakeholders including officials from city governments, the county government, COMPASS as well as developers, large employers and community leaders. These stakeholders made up the steering committee for the Blueprint with voting power reserved for the government officials and representatives from COMPASS. The steering committee also held focus groups and consortiums to get input from the rest of the community.
+    </p>
+    <p class = "blueprint_text_slides">
+      Blueprint Development: 2004 - 2006 <br>
+      Towards the end of 2005 and the beginning of 2006 the overarching goals and specific policies were developed. One of the important overarching goals was to reduce sprawling urban development. To achieve this goal, the specific polices that were implemented included restricting development in unincorporated areas of the county and to confine it to designated impact areas which are areas in which public services will be provided in the future.
+    </p>
+    <p class = "blueprint_text_slides">
+      Blueprint Implementation: 2006 - 2007 <br>
+      The implementation of the policies was planned to go into immediate effect. The policies were to incorporated into the comprehensive planning guides for each city and the county
+    </p>
+    <p class = "blueprint_text_slides">
+      Blueprint: Ada County <br>
+      However, before 2011, the only governments that incorporated the Blueprint policies were Ada County and Boise.  Both of which did so around mid-2007.
+    </p>
+
+
+
+  </div>
+
+  <br><br>
+
+  <section class = "theory_hyps">
+    <h3>Theory and Hypothesis</h3>
+    <h4>Optimal timing of development model</h4>
+    <p>
+      To test the effectiveness of the Ada County government in driving land use change, I follow the recent land use change literature and use the optimal timing of development model. This theory suggests that land owners or developers will change the land use of their parcel if they find that it maximizes their utility. Additionally, land owners will change the land use of their parcels when they find that the cost of waiting outweighs the benefits.
+    </p>
+    <p>
+      Using this theory in the context of Ada County, I have two hypotheses that I test. For both hypothesis, I expect that Ada County will have a discernible effect on land use change that fits the Blueprint policies. But for each hypothesis, I assume a different level of enforcement intensity. For the first hypothesis, I assume that Ada County will be a strong enforcer of land use change regulation. What I mean by this is that I assume that Ada County will try to restrict change in land use from undeveloped to developed as much as possible. Specifically, I first hypothesize that if a parcel is in Ada County, then the parcel is less likely to change land use from an undeveloped land use to a developed land use than a parcel in Canyon County.
+    </p>
+
+    <h4>H(1): If a parcel is in Ada County then the parcel is less likely to change land use from undeveloped land use to a developed land use than a parcel located Canyon COUNTY
+    </h4>
+
+    <p>
+      For the second hypothesis, I assume that Ada County will be less strict in enforcing land use change but will still encourage it in impact areas. So, secondly, I hypothesize that if a parcel is in Ada County, then it is more likely to change land use from undeveloped to developed if it is located within a designated city impact area.
+    </p>
+
+    <h4>
+      H(2): If a parcel is in Ada County, then it is more likely to change land use from undeveloped to a developed land use if it is located within a designated city impact area.
+    </h4>
+
+    <p>
+      Therefore, the null hypothesis in this case that the Ada County government will not an affect land use change Ada County.
+    </p>
+
+    <h4>
+      H(0): Ada County government has no effect on land use change
+    </h4>
+
+  </section>
+
+  <section class = "data">
+    <h3>Data</h3>
+      <h4>Dataset</h4>
+        <ul>
+        <li>88893 undeveloped parcels in Ada County and Canyon County as of 2001</li>
+
+            <ul>
+              <li>Land use change</li>
+              <li>Parcel Size</li>
+              <li>Distance to nearest city</li>
+              <li>Distance to water feature</li>
+              <li>Population distance</li>
+            </ul>
+        </ul>
+
+    <div id="data_image"></div>
+
+
+  </section>
+
+  <section>
+
+  </section>
+
+
+
+
+
+
+</div>
+
+<br>
+<br>
+
+
+
+        <div id="Figure1">Figure1</div>
+        <div id="Figure2">Figure2</div>
+
+
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="box footer">
+
+      <h1>Stuff in here about technology that I used for my research</h1>
+
+    </div>
+
+    <script type="text/javascript" src="thesis1.js"></script>
+
+
+
+  </body>
+</html>
