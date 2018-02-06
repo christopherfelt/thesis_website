@@ -13,6 +13,7 @@
       <img src="oldboise.jpg" alt="">
     </div>
 
+    <!-- i want this to collapse after scrolled down -->
     <div class="box header">
       <h1>MODELING THE DRIVERS OF LAND USE CHANGE IN ADA COUNTY AND CANYON COUNTY, IDAHO, USING A REGRESSION DISCONTINUITY DESIGN</h1>
 
@@ -49,6 +50,7 @@
 
 </section>
 
+<br><br>
 
   <div id="all_shapes">
       <h1>Figure 1</h1>
@@ -562,7 +564,7 @@
     </p>
 
     <div class="data">
-      <h1>County and City Impact Area</h1>
+      <h3>County and City Impact Area</h3>
       <ul>
         <li>Parcel Size</li>
         <li>Distance to Nearest City</li>
@@ -578,16 +580,786 @@
   <section>
     <h1>Method</h1>
 
+    <div class="method">
+      <h1>Regression Discontinuity Design</h1>
+      <ul>
+        <li>Quasi-Experimental Design</li>
+        <ul>
+          <li>Matching Test Subjects</li>
+          <li>Two Groups</li>
+          <ul>
+            <li>Control</li>
+            <li>Treatment</li>
+          </ul>
+          <li>Treatment</li>
+          <li>Thistlewaite and Campbell</li>
+          <ul>
+            <li>Observation: Students</li>
+            <li>Treatment:</li>
+            <ul>
+              <li>Certificate of Merit</li>
+              <li>Public Attention</li>
+            </ul>
+          </ul>
+        </ul>
+      </ul>
 
+      <img src="rdd1.png" alt="">
+    </div>
 
+    <p>
+      Before I get to my results I am going quickly review the RDD. The RDD is a quasi-experimental design that approximates the experimental design. This means that a subset of a larger sample is taken that includes subjects that are nearly matching. In an experimental design, the subjects are separated into either a control group or a treatment group. Those in the treatment group receive the treatment. Then any difference that exhibited between the two groups is attributed to the treatment. In social science, Thistlethwaite and Campbell introduced the RDD to approximate the experimental design. In their research, they took a sample of students who competed for a national scholarship. They then took a subset of that sample that included students that were nearly matching in several background variables.  This subset included both nearly losers and nearly winners of the competition. The students who lost acted as the control group. Those that won were treated like the treatment group because in addition to winning the scholarship the students received a certificate of merit and public attention for winning.  In their research, T and C hypothesized that the students who won the scholarship would be more inclined to pursue intellectual careers like those in academia because they receive the award and attention.
+    </p>
 
+    <img id="rdd_graph" src="graph1.png" alt="">
 
+    <p>
+      Here is a hypothetical graph of what T and C hypothesized. If we assume that on the x axis there is a background variable such as total family income and on the y axis is some metric for likelihood for pursuing an intellectual career, then we can see that as family income increase so does the likelihood of an academic career. But here in the center is a jump in the trend and this jump is linked to the student receiving the award and attention. To capture this effect, we operationalize the treatment by including a dummy variable that captures whether an observation received the treatment. The coefficient is then a measure of the magnitude of the effect that the treatment has on the outcome of the dependent variable. In this case, the dummy variable would be whether a student received the award and the attention.
+    </p>
+
+    <p>
+      The RDD provides better support for causal claims because it limits the amount of the variation in the dependent variable that is explained by unobservables.
+    </p>
+
+    <p>
+      The RDD has been utilized a handful of times in the land use change literature. One article used an RDD and found that city zoning ordinaces increased the likelihood that a parcel in Medina County, Ohio will change land use.
+    </p>
+    <p>
+      The observations in their study were parcels that were located within 25 hundered feet of a city zoning boundary.
+    </p>
+    <p>
+      The treatment in their study were the zoning ordinances.
+    </p>
+
+    <div id="rdd_map">
+      RDD Map
+    </div>
+
+    <p>
+      To implement the RDD in my research, I chose to include parcels that are within a 1 mile distance from the Ada County and Canyon County border. I chose this distance because it fell within the range of distances used in the previous research. I also did a sensitivity analysis using distances up to two miles without finding any substantial difference between the results. Distances within than a mile eliminated any variation in the dependent variables.
+    </p>
+
+    <div class="method">
+      <h3>RDD Quasi - Experiment</h3>
+      <ul>
+        <li>Test Subjects</li>
+        <ul>
+          <li>Nearly matching parcel along the border of Ada County and Canyon County</li>
+        </ul>
+        <li>Control Group</li>
+        <ul>
+          <li>Canyon County Parcels</li>
+        </ul>
+        <li>Treatment Group</li>
+        <ul>
+          <li>Ada County Parcels</li>
+        </ul>
+        <li>Treatment</li>
+        <ul>
+          <li>Blueprint for Good Growth</li>
+        </ul>
+      </ul>
+    </div>
+
+    <p>
+        To apply the quasi – experimental mold to my research. My test subjects are nearly matching observations along the border of Ada county and Canyon county. The control group are the parcels in Canyon County.	The treatment group are those in Ada County. And the treatment is the blueprint policies implemented in Ada County
+    </p>
+
+    <div class="method">
+      <h3>RDD Quasi - Experiment</h3>
+      <ul>
+        <li>Hypothesized Outcomes</li>
+        <ul>
+          <li>Time Period</li>
+          <ul>
+            <li>2006 - 2011</li>
+          </ul>
+        </ul>
+        <li>H1</li>
+        <ul>
+          <li>County(-)</li>
+        </ul>
+        <li>H2</li>
+        <ul>
+          <li>County(+)</li>
+          <li>Impact Area(+)</li>
+          <li>Impact Area > County</li>
+        </ul>
+      </ul>
+    </div>
+
+    <p>
+      Here are the hypothesized outcomes again for the period from 06 – 11. For the first hypothesis, in which I assumed that Ada County is a strong enforcer of land use regulation, I hypothesize that the county variable will be negative because Ada County will discourage a parcel from changing land use to such extent that a parcel in Ada County will be less likely to change.	For the second hypothesis, in which I assume that Ada County would be a weak enforcer, I hypothesize that the county and impact area variables will be positive and the coefficient for the impact area variable will be larger. This means that Ada County will not outright discourage land use change within the county but encourage it within impact area.
+    </p>
 
   </section>
 
+  <section>
+    <h1>Results</h1>
 
-        <!-- <div id="figure2"><h1>Figure2</h1></div>
-        <div id="figure3"><h1>Figure3</h1></div> -->
+
+
+    <!-- Model 1 -->
+    <div class="results">
+      <h2>Model 1: Categorical 01 - 11</h2>
+      <table>
+        <caption>Multinomial Logit</caption>
+        <thead>
+          <th>Outcomes(Base: 0)</th>
+          <th>1</th>
+          <th></th>
+          <th>2</th>
+          <th></th>
+          <th>3</th>
+          <th></th>
+        </thead>
+        <tr>
+          <td></td>
+          <td>&Beta;</td>
+          <td>sig</td>
+          <td>&Beta;</td>
+          <td>sig</td>
+          <td>&Beta;</td>
+          <td>sig</td>
+        </tr>
+        <tr>
+          <td>County^</td>
+          <td>.81</td>
+          <td>***</td>
+          <td>1.44</td>
+          <td>***</td>
+          <td>1.53</td>
+          <td>***</td>
+        </tr>
+        <tr>
+          <td>Impact Area^</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Parcel Size</td>
+          <td>-.46</td>
+          <td>***</td>
+          <td>-.53</td>
+          <td>***</td>
+          <td>-0.50</td>
+          <td>***</td>
+        </tr>
+        <tr>
+          <td>Distance to Nearest City</td>
+          <td>-5.3E-05</td>
+          <td>***</td>
+          <td>-7.2E-05</td>
+          <td>***</td>
+          <td>-7.6E-05</td>
+          <td>***</td>
+        </tr>
+        <tr>
+          <td>Distance to Water Feature</td>
+          <td>7.60E-06</td>
+          <td>***</td>
+          <td>9.36E-06</td>
+          <td>***</td>
+          <td>-2.94E-06</td>
+          <td>***</td>
+        </tr>
+        <tr>
+          <td>Pop. Density</td>
+          <td>0.001</td>
+          <td>***</td>
+          <td>0.001</td>
+          <td>***</td>
+          <td>0.001</td>
+          <td>**</td>
+        </tr>
+        <tr>
+          <td>Constant</td>
+          <td>-0.91</td>
+          <td>***</td>
+          <td>-3.06</td>
+          <td>***</td>
+          <td>-6.15</td>
+          <td>**</td>
+        </tr>
+        <tr>
+          <td>Pseudo R2</td>
+          <td>0.28</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>N</td>
+          <td>88893</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>***=Significant at 1%</td>
+          <td colspan="2">**=Significant at 5%</td>
+          <td colspan="2">*=Significant at 10%</td>
+          <td colspan="2">^=Dummy Variable</td>
+        </tr>
+      </table>
+    </div>
+
+    <p>
+      The results for Model 1 which used the categorical dependent variable for 01 – 11.  For each set of results, I have highlighted the primary variables of interest like I have done here. This first model is meant to capture the trends for the whole period and for the entire treasure valley. The results show that all the coefficients are significant at the 1% level for all the outcomes except for population density and distance to water feature for outcome 3. Population density in this case is significant at the 5% level and distance to water feature is not significant at all. The direction of the coefficient hold across all outcomes. For instance, the county variable is positive which indicates that a parcel in Ada County is more likely to change land use than one in Canyon county.  Parcel size and Distance to nearest city are both negative which means that if a parcel is larger and far from the nearest city it is less likely to change land use. Population Density and distance to water feature are positive for those coefficients that are statistically significant. This means that parcels more likely to change land use if they are in areas with higher populations and if they are far from a water feature.
+    </p>
+
+
+    <!-- Model 2 -->
+    <div class="results">
+      <h2>Model 2: Categorical 01 - 06</h2>
+      <table>
+        <caption>Multinomial Logit</caption>
+        <thead>
+          <th>Outcomes(Base: 0)</th>
+          <th>1</th>
+          <th></th>
+          <th>2</th>
+          <th></th>
+          <th>3</th>
+          <th></th>
+        </thead>
+        <tr>
+          <td></td>
+          <td>&Beta;</td>
+          <td>sig</td>
+          <td>&Beta;</td>
+          <td>sig</td>
+          <td>&Beta;</td>
+          <td>sig</td>
+        </tr>
+        <tr>
+          <td>County^</td>
+          <td>.81</td>
+          <td>***</td>
+          <td>1.37</td>
+          <td>***</td>
+          <td>1.69</td>
+          <td>***</td>
+        </tr>
+        <tr>
+          <td>Impact Area^</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Parcel Size</td>
+          <td>-.44</td>
+          <td>***</td>
+          <td>-.53</td>
+          <td>***</td>
+          <td>-0.37</td>
+          <td>***</td>
+        </tr>
+        <tr>
+          <td>Distance to Nearest City</td>
+          <td>-5.2E-05</td>
+          <td>***</td>
+          <td>-7E-05</td>
+          <td>***</td>
+          <td>-6.8E-05</td>
+          <td>***</td>
+        </tr>
+        <tr>
+          <td>Distance to Water Feature</td>
+          <td>7.38E-06</td>
+          <td>***</td>
+          <td>1.01E-05</td>
+          <td>***</td>
+          <td>1.9E-05</td>
+          <td>***</td>
+        </tr>
+        <tr>
+          <td>Pop. Density</td>
+          <td>0.001</td>
+          <td>***</td>
+          <td>0.0008</td>
+          <td>***</td>
+          <td>0.001</td>
+          <td>***</td>
+        </tr>
+        <tr>
+          <td>Constant</td>
+          <td>-1.008</td>
+          <td>***</td>
+          <td>-3.21</td>
+          <td>***</td>
+          <td>-6.52</td>
+          <td>***</td>
+        </tr>
+        <tr>
+          <td>Pseudo R2</td>
+          <td>0.27</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>N</td>
+          <td>88943</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>***=Significant at 1%</td>
+          <td colspan="2">**=Significant at 5%</td>
+          <td colspan="2">*=Significant at 10%</td>
+          <td colspan="2">^=Dummy Variable</td>
+        </tr>
+      </table>
+    </div>
+
+    <p>
+      Here are the results for Model 2 which uses the categorical dependent variable for the period from 01 – 06. This model is meant to capture trends before Blueprint policies are implemented. The results for this model are largely the same as those for Model 1. One exception is the coefficient for distance to water feature for the third outcome which is significant for this model and is in the opposite direction of the two other outcomes. This means that a parcel that is far from a water feature is less likely to change land use from undeveloped to high intensity development.
+    </p>
+
+    <!-- Model 3 -->
+    <div class="results">
+      <h2>Model 3: Categorical 06 - 11</h2>
+      <table>
+        <caption>Multinomial Logit</caption>
+        <thead>
+          <th>Outcomes(Base: 0)</th>
+          <th>1</th>
+          <th></th>
+          <th>2</th>
+          <th></th>
+          <th>3</th>
+          <th></th>
+        </thead>
+        <tr>
+          <td></td>
+          <td>&Beta;</td>
+          <td>sig</td>
+          <td>&Beta;</td>
+          <td>sig</td>
+          <td>&Beta;</td>
+          <td>sig</td>
+        </tr>
+        <tr>
+          <td>County^</td>
+          <td>.70</td>
+          <td>***</td>
+          <td>-3.76</td>
+          <td></td>
+          <td>-13.29</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Impact Area^</td>
+          <td>-.14</td>
+          <td>-</td>
+          <td>5.05</td>
+          <td>-</td>
+          <td>-1.57</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Parcel Size</td>
+          <td>-.22</td>
+          <td>***</td>
+          <td>-.04</td>
+          <td>-</td>
+          <td>-0.21</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Distance to Nearest City</td>
+          <td>-6.5E-05</td>
+          <td>***</td>
+          <td>-5E-05</td>
+          <td>-</td>
+          <td>-0.00027</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Distance to Water Feature</td>
+          <td>7.39E-06</td>
+          <td>***</td>
+          <td>3.33E-05</td>
+          <td>**</td>
+          <td>-.0001</td>
+          <td>**</td>
+        </tr>
+        <tr>
+          <td>Pop. Density</td>
+          <td>0.001</td>
+          <td>***</td>
+          <td>0.0008</td>
+          <td>*</td>
+          <td>0.001</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Constant</td>
+          <td>-3.03</td>
+          <td>***</td>
+          <td>-8.24</td>
+          <td>-</td>
+          <td>-7.16</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Pseudo R2</td>
+          <td>0.14</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>N</td>
+          <td>67434</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>***=Significant at 1%</td>
+          <td colspan="2">**=Significant at 5%</td>
+          <td colspan="2">*=Significant at 10%</td>
+          <td colspan="2">^=Dummy Variable</td>
+        </tr>
+      </table>
+    </div>
+
+    <p>
+      Here are the results for Model 3 which uses the categorical dependent variable for the period from 06 – 11 and is one model in which the hypotheses apply. For the first outcome, the coefficient for the county variable is positive which is contrary to hypothesis one. Additionally, this coefficient is positive while the coefficient for the impact area is negative and insignificant which is contrary to hypothesis 2. The county variable is in the right direction for outcome 2 and 3 for the first hypothesis, however, both are insignificant. The impact area variable is also significant for both outcomes and in the wrong direction for outcome three. The results for the remaining variables are similar to the previous two models. However, distance to nearest city and distance to water feature are the only variables that hold significance for all outcomes.
+    </p>
+
+
+    <!-- Model 4 -->
+    <div class="results">
+      <h2>Marginal Effects for Model 1 - 3</h2>
+      <table>
+        <caption>Multinomial Logit</caption>
+        <thead>
+          <th>Outcomes(Base: 0)</th>
+          <th>1</th>
+          <th></th>
+          <th>2</th>
+          <th></th>
+          <th>3</th>
+          <th></th>
+        </thead>
+        <tr>
+          <td></td>
+          <td>&Beta;</td>
+          <td>sig</td>
+          <td>&Beta;</td>
+          <td>sig</td>
+          <td>&Beta;</td>
+          <td>sig</td>
+        </tr>
+        <tr>
+          <td>County^</td>
+          <td>.09</td>
+          <td>***</td>
+          <td>.08</td>
+          <td>***</td>
+          <td>.003</td>
+          <td>***</td>
+        </tr>
+        <tr>
+          <td>Impact Area^</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-.0007</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Parcel Size</td>
+          <td>-.05</td>
+          <td>***</td>
+          <td>-.04</td>
+          <td>***</td>
+          <td>-0.001</td>
+          <td>***</td>
+        </tr>
+        <tr>
+          <td>Distance to Nearest City</td>
+          <td>-5.44E-06</td>
+          <td>***</td>
+          <td>-5.11E-06</td>
+          <td>***</td>
+          <td>-3.16E-07</td>
+          <td>***</td>
+        </tr>
+        <tr>
+          <td>Distance to Water Feature</td>
+          <td>7.75E-07</td>
+          <td>***</td>
+          <td>7.31E-07</td>
+          <td>***</td>
+          <td>3.57E-08</td>
+          <td>***</td>
+        </tr>
+        <tr>
+          <td>Pop. Density</td>
+          <td>0.001</td>
+          <td>***</td>
+          <td>0.00012</td>
+          <td>***</td>
+          <td>1.42E-06</td>
+          <td>***</td>
+        </tr>
+        <tr>
+          <td>***=Significant at 1%</td>
+          <td colspan="2">**=Significant at 5%</td>
+          <td colspan="2">*=Significant at 10%</td>
+          <td colspan="2">^=Dummy Variable</td>
+        </tr>
+      </table>
+    </div>
+    <p>
+      Here are the marginal effects for outcome 1 for Models 1 – 3. I didn’t include the marginal effects for other outcomes because all the results were insignificant. The pattern in this set of results is that the marginal effects for models for 1 and 2 are similar and larger than for model three. For instance, for models 1 and 2, a parcel is 8 percent more likely to change land use if it is in Ada County. This effect drops to .3 percent for model three. This pattern holds for the remaining independent variables except impact area which is insignificant and not included in models 1 and 2.
+    </p>
+
+    <!-- Model 4-6 -->
+    <div class="results">
+      <h2>Model 4 - 6: Binary DV</h2>
+      <table>
+        <caption>Binary Logit</caption>
+        <thead>
+          <th></th>
+          <th>Model 4</th>
+          <th></th>
+          <th>Model 5</th>
+          <th></th>
+          <th>Model 6</th>
+          <th></th>
+        </thead>
+        <tr>
+          <td></td>
+          <td>&Beta;</td>
+          <td>sig</td>
+          <td>&Beta;</td>
+          <td>sig</td>
+          <td>&Beta;</td>
+          <td>sig</td>
+        </tr>
+        <tr>
+          <td>County^</td>
+          <td>1.03</td>
+          <td>***</td>
+          <td>1.03</td>
+          <td>***</td>
+          <td>3.24</td>
+          <td>***</td>
+        </tr>
+        <tr>
+          <td>Impact Area^</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-0.99</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Parcel Size</td>
+          <td>-.59</td>
+          <td>***</td>
+          <td>-.59</td>
+          <td>***</td>
+          <td>-5.64E-01</td>
+          <td>***</td>
+        </tr>
+        <tr>
+          <td>Distance to Nearest City</td>
+          <td>-8.6E-05</td>
+          <td>***</td>
+          <td>-8.6E-05</td>
+          <td>***</td>
+          <td>-1.25E-04</td>
+          <td>***</td>
+        </tr>
+        <tr>
+          <td>Distance to Water Feature</td>
+          <td>-7.4E-05</td>
+          <td>***</td>
+          <td>-7.4E-05</td>
+          <td>**</td>
+          <td>-2.9E-05</td>
+          <td>***</td>
+        </tr>
+        <tr>
+          <td>Pop. Density</td>
+          <td>0.002</td>
+          <td>***</td>
+          <td>0.002</td>
+          <td>***</td>
+          <td>-0.01</td>
+          <td>***</td>
+        </tr>
+        <tr>
+          <td>Constant</td>
+          <td>1.23</td>
+          <td>***</td>
+          <td>1.23</td>
+          <td>***</td>
+          <td>-1.18</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Pseudo R2</td>
+          <td>0.42</td>
+          <td></td>
+          <td>.41</td>
+          <td></td>
+          <td>.32</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>N</td>
+          <td>7821</td>
+          <td></td>
+          <td>7821</td>
+          <td></td>
+          <td>6369</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>***=Significant at 1%</td>
+          <td colspan="2">**=Significant at 5%</td>
+          <td colspan="2">*=Significant at 10%</td>
+          <td colspan="2">^=Dummy Variable</td>
+        </tr>
+      </table>
+    </div>
+    <p>
+      Here are the results for models that use the RDD dataset. Most of the results are similar to those in the previous models. The county variable is positive and significant and the impact area variable is negative and insignificant which contrary to both hypotheses. The results for the remaining variables are in same direction as the previous models except for distance to water feature which is negative for each model. Additionally, population density is also negative for model 6 which differs from model 3 which looks at the same period.
+    </p>
+
+    <div class="results">
+      <h2>Marginal Effects for Model 4 - 6</h2>
+      <table>
+        <caption>Multinomial Logit</caption>
+        <thead>
+          <th>Outcomes(Base: 0)</th>
+          <th>1</th>
+          <th></th>
+          <th>2</th>
+          <th></th>
+          <th>3</th>
+          <th></th>
+        </thead>
+        <tr>
+          <td></td>
+          <td>&Beta;</td>
+          <td>sig</td>
+          <td>&Beta;</td>
+          <td>sig</td>
+          <td>&Beta;</td>
+          <td>sig</td>
+        </tr>
+        <tr>
+          <td>County^</td>
+          <td>.05</td>
+          <td>***</td>
+          <td>.05</td>
+          <td>***</td>
+          <td>.002</td>
+          <td>*</td>
+        </tr>
+        <tr>
+          <td>Impact Area^</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-.00034</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Parcel Size</td>
+          <td>-.02</td>
+          <td>***</td>
+          <td>-.02</td>
+          <td>***</td>
+          <td>-0.002</td>
+          <td>*</td>
+        </tr>
+        <tr>
+          <td>Distance to Nearest City</td>
+          <td>-4.12E-06</td>
+          <td>***</td>
+          <td>-4.12E-06</td>
+          <td>***</td>
+          <td>-5.23E-07</td>
+          <td>*</td>
+        </tr>
+        <tr>
+          <td>Distance to Water Feature</td>
+          <td>-3.53E-06</td>
+          <td>***</td>
+          <td>-3.53E-07</td>
+          <td>***</td>
+          <td>-1.20E-08</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Pop. Density</td>
+          <td>0.0001</td>
+          <td>***</td>
+          <td>0.0001</td>
+          <td>***</td>
+          <td>-6.28E-06</td>
+          <td>*</td>
+        </tr>
+        <tr>
+          <td>***=Significant at 1%</td>
+          <td colspan="2">**=Significant at 5%</td>
+          <td colspan="2">*=Significant at 10%</td>
+          <td colspan="2">^=Dummy Variable</td>
+        </tr>
+      </table>
+    </div>
+
+    <p>
+      The marginal effects share the same pattern to those for the previous models. That is, the models that look at the 01 – 11 and 01 – 06 period have larger effects for each variable compared to the model that looks at the period from 06 – 11. Additionally, the results for model six are significant at lower levels than any other model.
+    </p>
+
+  </section>
+
+<section>
+  <h1>Summary of Results</h1>
+
+  <p>
+    For the period from 2006 – 2011, I first hypothesized that the county variable would be negative. This hypothesis assumed that Ada County would be a strong enforcer of land use regulation and discourage land use change as much as possible.	However, the results for the county variable were significant and positive.	Second, I hypothesized that if county is positive then the impact area will also be positive and the coefficient would be larger for the impact area. For this hypothesis, I assumed that Ada County be a weak enforcer of land use regulation but would encourage development within impact areas.	However, the results show that the county variable was often positive and significant and the impact area variable was negative and insignificant.
+  </p>
+  <p>
+    The results suggest that Ada County was not effective in driving land use change.	Additionally, the results also suggest that county governments that fit the second pattern of scope of power over land use regulation are not effective at controlling and steering land use change.  The results for the other independent variables suggest that a parcel that is large and far from the nearest city is unlikely to change land use. Additionally, a parcel is more likely to change land use if it is an area with a high population. Finally, the distance to water feature was ambiguous because for the first models a higher distance to a water feature increased the likelihood that a parcel will change land use expect for high intensity development. However, the opposite was the case for those parcels along the border between the counties.
+  </p>
+
+
+</section>
 
 
           <!-- container -->
@@ -596,6 +1368,7 @@
   </div>
   <!-- grid -->
 </div>
+
 
     <div class="box footer">
 

@@ -4,6 +4,10 @@ html, body {
   border: 0;
 }
 
+body {
+  padding-bottom: 400px;
+}
+
 .grid {
   display: grid;
   position: absolute;
@@ -432,7 +436,7 @@ html, body {
   border: solid darkblue;
 }
 
-.data h4 {
+.data h3 {
   text-align: left;
   margin-left: 5%;
 }
@@ -462,6 +466,81 @@ html, body {
   height: 400px;
   width: 400px;
 }
+
+.method {
+  position: relative;
+  background: lightblue;
+  border: solid darkblue;
+}
+
+.method h3 {
+  text-align: left;
+  margin-left: 5%;
+}
+
+.method ul li{
+  text-align: left;
+}
+
+.method img {
+  width: 40%;
+  position: absolute;
+  top: 20%;
+  right: 10%;
+}
+
+#rdd_graph {
+  width: 400px;
+  background: lightblue;
+  border: solid darkblue;
+  padding: 1em;
+}
+
+#rdd_map {
+  border: solid black;
+  margin: auto;
+  height: 400px;
+  width: 400px;
+}
+
+.results {
+  position: relative;
+  height: auto;
+  background: lightblue;
+  border: solid darkblue;
+  padding-bottom: 5%;
+}
+
+.results h3 {
+  text-align: left;
+  margin-left: 5%;
+}
+
+.results ul li{
+  text-align: left;
+}
+
+.results img {
+  width: 40%;
+  position: absolute;
+  top: 20%;
+  right: 10%;
+}
+/* table class */
+.primary {
+  font-weight: bold;
+  background: yellow;
+}
+
+.results table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin: auto;
+}
+
+
+
+
 
 .footer {
   box-sizing: border-box;
