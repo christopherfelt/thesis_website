@@ -189,6 +189,64 @@ function blueprintTextSlideShow(n){
   dots[blueprint_text_index].classname += " active";
 }
 
+var scrollLeft = document.documentElement.scrollLeft;
+var scrollTop = document.documentElement.scrollTop;
+var scrollBack = 0;
+
+
+var tocHighlight = function(from, to, elementID, color){
+  if(scrollTop >= from && scrollTop < to){
+    document.getElementById(elementID).style.backgroundColor = color;
+
+  } else {
+    document.getElementById(elementID).style.backgroundColor = "transparent";
+  }
+};
+
+
+var scrollHighlight = function () {
+  scrollTop = document.documentElement.scrollTop;
+  console.log(scrollTop);
+  tocHighlight(0, 600, "abstract_toc", "rgba(0,205,255, .5)");
+  tocHighlight(600, 2400, "litReview_toc", "rgba(0,205,255, .5)");
+  tocHighlight(2400, 3100, "studyArea_toc", "rgba(0,205,255, .5)");
+  tocHighlight(2400, 3100, "bluePrint_toc", "rgba(0, 225, 255, .5)")
+  tocHighlight(3100, 3800, "theoryHyp_toc", "rgba(0, 205, 255, .5)");
+  tocHighlight(3800, 8200, "data_toc", "rgba(0,205,255, .5)");
+  tocHighlight(8200, 10900, "method_toc", "rgba(0,205,255, .5)");
+  tocHighlight(10900, 13400, "results_toc", "rgba(0,205,255, .5)");
+  tocHighlight(13400, 15000, "summary_toc", "rgba(0,205,255, .5)")
+
+};
+
+
+var headerCollapse = function () {
+  scrollTop = document.documentElement.scrollTop;
+  var header = document.getElementsByClassName("header");
+  console.log(header[0].style.fontSize);
+  if (scrollTop > 1 && scrollTop <= 80) {
+    var deltaHeight= ((scrollTop/5) - 20)*-1;
+    deltaHeight = deltaHeight.toString()+"%";
+    header[0].style.height = deltaHeight;
+    header[0].style.fontSize = "60%";
+  } else if (scrollTop < 1){
+    header[0].style.fontSize = "100%";
+    header[0].style.height = "20%";
+    deltaHeight= ((scrollTop/5) - 20)*-1;
+  } else if (scrollTop > 80) {
+    header[0].style.height = "7%";
+    header[0].style.fontSize = "60%";
+  }
+}
+
+
+
+
+window.addEventListener('scroll', scrollHighlight);
+window.addEventListener('scroll', headerCollapse);
+
+
+
 //Figure1 Map
 //TODO Create a legend
 
