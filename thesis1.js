@@ -162,10 +162,11 @@ function move_blueprint(from_location, to_location, backwards){
   }
 }
 
-var blueprint_text_index = 1;
+var blueprint_text_index = 0;
 blueprintTextSlideShow(blueprint_text_index);
 
 function plusSlides(n) {
+  blueprint_text_index += n;
   blueprintTextSlideShow(blueprint_text_index);
 }
 
@@ -176,30 +177,33 @@ function showSlides(n) {
 function blueprintTextSlideShow(n){
   var i;
   var slides = document.getElementsByClassName('blueprint_text_slides');
-  var dots = document.getElementsByClassName("dot");
-  if(n > slides.length) {blueprint_text_index = 1}
-  if(n < 1) {slideIndex = slides.lenth}
+  // var dots = document.getElementsByClassName("dot");
+  if(blueprint_text_index > slides.length) {blueprint_text_index = slides.length};
+  if(blueprint_text_index < 0) {blueprint_text_index = 0};
   for(i=0; i < slides.length; i++) {
     slides[i].style.display = "none";
-  }
-  for (i=0; i<dots.length; i++){
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
+  };
+  // for (i=0; i<dots.length; i++){
+  //   dots[i].className = dots[i].className.replace(" active", "");
+
+// };
   slides[blueprint_text_index].style.display = "block";
-  dots[blueprint_text_index].classname += " active";
-}
+  // dots[blueprint_text_index].classname += " active";
+};
 
 var scrollLeft = document.documentElement.scrollLeft;
 var scrollTop = document.documentElement.scrollTop;
 var scrollBack = 0;
 
 
-var tocHighlight = function(from, to, elementID, color){
+var tocHighlight = function(from, to, elementID, color, color2){
   if(scrollTop >= from && scrollTop < to){
     document.getElementById(elementID).style.backgroundColor = color;
+    document.getElementById(elementID).style.border = "solid " + color2 + " 1px";
 
   } else {
     document.getElementById(elementID).style.backgroundColor = "transparent";
+    document.getElementById(elementID).style.border = "none";
   }
 };
 
@@ -207,15 +211,15 @@ var tocHighlight = function(from, to, elementID, color){
 var scrollHighlight = function () {
   scrollTop = document.documentElement.scrollTop;
   console.log(scrollTop);
-  tocHighlight(0, 600, "abstract_toc", "rgba(0,205,255, .5)");
-  tocHighlight(600, 2400, "litReview_toc", "rgba(0,205,255, .5)");
-  tocHighlight(2400, 3100, "studyArea_toc", "rgba(0,205,255, .5)");
-  tocHighlight(2400, 3100, "bluePrint_toc", "rgba(0, 225, 255, .5)")
-  tocHighlight(3100, 3800, "theoryHyp_toc", "rgba(0, 205, 255, .5)");
-  tocHighlight(3800, 8200, "data_toc", "rgba(0,205,255, .5)");
-  tocHighlight(8200, 10900, "method_toc", "rgba(0,205,255, .5)");
-  tocHighlight(10900, 13400, "results_toc", "rgba(0,205,255, .5)");
-  tocHighlight(13400, 15000, "summary_toc", "rgba(0,205,255, .5)")
+  tocHighlight(0, 600, "abstract_toc", "lightblue", "darkblue");
+  tocHighlight(600, 2400, "litReview_toc", "lightblue", "darkblue");
+  tocHighlight(2400, 3100, "studyArea_toc", "lightblue", "darkblue");
+  // tocHighlight(2400, 3100, "bluePrint_toc", "rgba(0, 225, 255, .5)")
+  tocHighlight(3100, 3800, "theoryHyp_toc", "lightblue", "darkblue");
+  tocHighlight(3800, 8180, "data_toc", "lightblue", "darkblue");
+  tocHighlight(8180, 10900, "method_toc", "lightblue", "darkblue");
+  tocHighlight(10900, 13400, "results_toc", "lightblue", "darkblue");
+  tocHighlight(13400, 15000, "summary_toc", "lightblue", "darkblue")
 
 };
 
@@ -240,10 +244,33 @@ var headerCollapse = function () {
 }
 
 
+var changeBackgroundInfo = function(from, to, back_class, n) {
+
+  if (scrollTop >= from && scrollTop < to){
+    document.getElementsByClassName(back_class)[n].style.display = "block";
+  } else {
+    document.getElementsByClassName(back_class)[n].style.display = "none";
+  }
+
+};
+
+var changebackgroundInfoScroll = function() {
+  scrollTop = document.documentElement.scrollTop;
+  changeBackgroundInfo(0, 600, "back_info", 0);
+  changeBackgroundInfo(600, 2400, "back_info", 1);
+  changeBackgroundInfo(2400, 3100, "back_info", 2);
+  changeBackgroundInfo(3100, 3800, "back_info", 3);
+  changeBackgroundInfo(3800, 8180, "back_info", 4);
+  changeBackgroundInfo(8180, 10900, "back_info", 5);
+};
 
 
 window.addEventListener('scroll', scrollHighlight);
 window.addEventListener('scroll', headerCollapse);
+window.addEventListener('scroll', changebackgroundInfoScroll);
+
+
+
 
 
 

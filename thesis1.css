@@ -46,6 +46,13 @@ body {
   z-index: 2;
   width: 20%;
   cursor: pointer;
+
+}
+
+#abstract_toc, #litReview_toc, #studyArea_toc, #theoryHyp_toc,
+#data_toc, #method_toc, #results_toc, #summary_toc {
+  border: none;
+  border-radius: 10px;
 }
 
 
@@ -80,6 +87,7 @@ body {
   padding-right: 20%;
   z-index: 10;
   background-color: white;
+  border-radius: 5px;
 
 }
 
