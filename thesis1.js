@@ -200,8 +200,10 @@ var tocHighlight = function(from, to, elementID, color, color2){
   if(scrollTop >= from && scrollTop < to){
     document.getElementById(elementID).style.backgroundColor = color;
     document.getElementById(elementID).style.border = "solid " + color2 + " 1px";
+    document.getElementById(elementID).style.color = "white";
 
   } else {
+    document.getElementById(elementID).style.color = "black"
     document.getElementById(elementID).style.backgroundColor = "transparent";
     document.getElementById(elementID).style.border = "none";
   }
@@ -211,15 +213,18 @@ var tocHighlight = function(from, to, elementID, color, color2){
 var scrollHighlight = function () {
   scrollTop = document.documentElement.scrollTop;
   console.log(scrollTop);
-  tocHighlight(0, 600, "abstract_toc", "lightblue", "darkblue");
-  tocHighlight(600, 2400, "litReview_toc", "lightblue", "darkblue");
-  tocHighlight(2400, 3100, "studyArea_toc", "lightblue", "darkblue");
+  highLightedTextColor = "rgba(85, 32, 0, .6)";
+  highLightedBorderColor = "rgba(85,32,0,1)"
+
+  tocHighlight(0, 600, "abstract_toc", highLightedTextColor, highLightedBorderColor);
+  tocHighlight(600, 2400, "litReview_toc", highLightedTextColor, highLightedBorderColor);
+  tocHighlight(2400, 3100, "studyArea_toc", highLightedTextColor, highLightedBorderColor);
   // tocHighlight(2400, 3100, "bluePrint_toc", "rgba(0, 225, 255, .5)")
-  tocHighlight(3100, 3800, "theoryHyp_toc", "lightblue", "darkblue");
-  tocHighlight(3800, 8180, "data_toc", "lightblue", "darkblue");
-  tocHighlight(8180, 10900, "method_toc", "lightblue", "darkblue");
-  tocHighlight(10900, 13400, "results_toc", "lightblue", "darkblue");
-  tocHighlight(13400, 15000, "summary_toc", "lightblue", "darkblue")
+  tocHighlight(3100, 3800, "theoryHyp_toc", highLightedTextColor, highLightedBorderColor);
+  tocHighlight(3800, 8180, "data_toc", highLightedTextColor, highLightedBorderColor);
+  tocHighlight(8180, 10900, "method_toc", highLightedTextColor, highLightedBorderColor);
+  tocHighlight(10900, 12725, "results_toc", highLightedTextColor, highLightedBorderColor);
+  tocHighlight(12725, 15000, "summary_toc", highLightedTextColor, highLightedBorderColor);
 
 };
 

@@ -33,7 +33,7 @@ body {
 .oldboise img {
   width: 100%;
   height: auto;
-  opacity: .24;
+  opacity: .1;
 }
 
 
@@ -75,6 +75,15 @@ body {
   padding-top: 5%;
 }
 
+.header, .blueprint_section, .slide_show_paragraphs,
+.data, .method, #rdd_graph, .results {
+  background-color: rgba(85, 32, 0, .6);
+  color: white;
+  border: solid 2px rgba(85,32,0,1);
+
+
+}
+
 .header {
   box-sizing: border-box;
   position: fixed;
@@ -86,7 +95,6 @@ body {
   padding-left: 20%;
   padding-right: 20%;
   z-index: 10;
-  background-color: white;
   border-radius: 5px;
 
 }
@@ -99,16 +107,18 @@ body {
 
 
 
-#all_shapes {
+#all_shapes, #counties, #change_image {
   border: solid black;
   margin: auto;
   height: 400px;
   width: 400px;
 }
 
+
+
 /* Automatic/City Limit Slide Show */
 .imgDiv {
-  border: solid black;
+  /* border: solid black; */
   height: 600px;
   margin: auto;
 }
@@ -148,11 +158,11 @@ body {
 /* Manual/Blueprint Slide Show */
 .blueprint_section {
   box-sizing: border-box;
-  border: solid darkblue;
+  /* border: solid darkblue; */
   width: 100%;
   height: 400px;
   position: relative;
-  background: lightblue;
+  /* background: lightblue; */
 }
 
 #blueprint_logo{
@@ -411,11 +421,13 @@ body {
 
 .slide_show_paragraphs {
   box-sizing: border-box;
-  border: solid darkblue;
+  padding: 1px 50px 0 50px;
+  /* border: solid darkblue; */
   width: 100%;
   height: 100px;
   position: relative;
-  background: lightblue;
+  height: 175px;
+  /* background: lightblue; */
 }
 
 .dot {
@@ -431,24 +443,32 @@ body {
 
 #slideShowButLeft {
   position: absolute;
+  top: 40%;
   left: 0;
   height: 50px;
 }
 
 #slideShowButRight {
   position: absolute;
+  top: 40%;
   right: 0;
   height: 50px;
+}
+
+#slideShowButLeft, #slideShowButRight {
+  background-color: rgba(85,32,0,1);
+  color: white;
+  border: none;
 }
 
 .blueprint_text_slides {
   display: none;
 }
 
-.data {
+/* .data {
   background: lightblue;
   border: solid darkblue;
-}
+} */
 
 .data h3 {
   text-align: left;
@@ -483,8 +503,8 @@ body {
 
 .method {
   position: relative;
-  background: lightblue;
-  border: solid darkblue;
+  /* background: lightblue;
+  border: solid darkblue; */
 }
 
 .method h3 {
@@ -505,8 +525,8 @@ body {
 
 #rdd_graph {
   width: 400px;
-  background: lightblue;
-  border: solid darkblue;
+  /* background: lightblue;
+  border: solid darkblue; */
   padding: 1em;
 }
 
@@ -520,8 +540,8 @@ body {
 .results {
   position: relative;
   height: auto;
-  background: lightblue;
-  border: solid darkblue;
+  /* background: lightblue;
+  border: solid darkblue; */
   padding-bottom: 5%;
 }
 
@@ -552,6 +572,9 @@ body {
   margin: auto;
 }
 
+.back_info {
+  display: none;
+}
 
 
 
