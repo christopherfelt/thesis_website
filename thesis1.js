@@ -199,7 +199,7 @@ var scrollBack = 0;
 var tocHighlight = function(from, to, elementID, color, color2){
   if(scrollTop >= from && scrollTop < to){
     document.getElementById(elementID).style.backgroundColor = color;
-    document.getElementById(elementID).style.border = "solid " + color2 + " 1px";
+    // document.getElementById(elementID).style.border = "solid " + color2 + " 1px";
     document.getElementById(elementID).style.color = "white";
 
   } else {
@@ -213,8 +213,8 @@ var tocHighlight = function(from, to, elementID, color, color2){
 var scrollHighlight = function () {
   scrollTop = document.documentElement.scrollTop;
   console.log(scrollTop);
-  highLightedTextColor = "rgba(85, 32, 0, .6)";
-  highLightedBorderColor = "rgba(85,32,0,1)"
+  highLightedTextColor = "rgba(67, 70, 75, .6)";
+  highLightedBorderColor = "black"
 
   tocHighlight(0, 600, "abstract_toc", highLightedTextColor, highLightedBorderColor);
   tocHighlight(600, 2400, "litReview_toc", highLightedTextColor, highLightedBorderColor);
@@ -222,8 +222,8 @@ var scrollHighlight = function () {
   // tocHighlight(2400, 3100, "bluePrint_toc", "rgba(0, 225, 255, .5)")
   tocHighlight(3100, 3800, "theoryHyp_toc", highLightedTextColor, highLightedBorderColor);
   tocHighlight(3800, 8180, "data_toc", highLightedTextColor, highLightedBorderColor);
-  tocHighlight(8180, 10900, "method_toc", highLightedTextColor, highLightedBorderColor);
-  tocHighlight(10900, 12725, "results_toc", highLightedTextColor, highLightedBorderColor);
+  tocHighlight(8180, 10700, "method_toc", highLightedTextColor, highLightedBorderColor);
+  tocHighlight(10700, 12725, "results_toc", highLightedTextColor, highLightedBorderColor);
   tocHighlight(12725, 15000, "summary_toc", highLightedTextColor, highLightedBorderColor);
 
 };
@@ -261,74 +261,189 @@ var changeBackgroundInfo = function(from, to, back_class, n) {
 
 var changebackgroundInfoScroll = function() {
   scrollTop = document.documentElement.scrollTop;
-  changeBackgroundInfo(0, 600, "back_info", 0);
-  changeBackgroundInfo(600, 2400, "back_info", 1);
-  changeBackgroundInfo(2400, 3100, "back_info", 2);
-  changeBackgroundInfo(3100, 3800, "back_info", 3);
-  changeBackgroundInfo(3800, 8180, "back_info", 4);
-  changeBackgroundInfo(8180, 10900, "back_info", 5);
+  changeBackgroundInfo(0, 200, "back_info", 0);
+  changeBackgroundInfo(200, 800, "back_info", 1);
+  changeBackgroundInfo(800, 4000, "back_info", 2);
+  changeBackgroundInfo(4000, 10600, "back_info", 3);
+  changeBackgroundInfo(10600, 13000, "back_info", 4);
+  changeBackgroundInfo(13000, 20000, "back_info", 5);
 };
+
+// var checkPosition = function(){
+//   var thing = document.getElementById("check_pos");
+//   thing.innerHTML = scrollTop;
+// }
 
 
 window.addEventListener('scroll', scrollHighlight);
 window.addEventListener('scroll', headerCollapse);
 window.addEventListener('scroll', changebackgroundInfoScroll);
+// window.addEventListener('scroll', checkPosition);
 
 
 
 
 
 
-//Figure1 Map
-//TODO Create a legend
+// All Shapes
+// TODO Create a legend
+
+//All Shapes Figure 1
+require([
+  "esri/Map",
+  "esri/views/MapView",
+  "esri/layers/FeatureLayer",
+  "dojo/domReady!"
+],
+
+function(Map, MapView, FeatureLayer){
+  var map = new Map ({
+    basemap: "hybrid"
+  });
+
+  var view = new MapView({
+    container: "all_shapes",
+    map:map,
+
+    extent: {
+      //TODO Add Extent Coordinates
+      xmin: 27046324,
+      ymin: 5322026,
+      xmax: 27168623,
+      ymax: 5444326,
+      spatialReference: 102100,
+    }
+  });
+
+  // var parcelLayer = new FeatureLayer ({
+  //   url: "https://services8.arcgis.com/nwNGnvCfuuBjRuZt/arcgis/rest/services/dsnu01/FeatureServer" //TODO upload parcel layer to dev site
+  // });
+  var countiesLayer = new FeatureLayer ({
+    url: "https://services8.arcgis.com/nwNGnvCfuuBjRuZt/arcgis/rest/services/adacan/FeatureServer" //TODO upload counties layer
+  });
+  var citiesLayer = new FeatureLayer ({
+    url: "https://services8.arcgis.com/nwNGnvCfuuBjRuZt/arcgis/rest/services/citylimits00/FeatureServer" //TODO upload cities layer to dev site
+  });
+
+  // var xmax = view.extent.xmax;
+  // var xmin = view.extent.xmin;
+  // var ymax = view.extent.ymax;
+  // var ymin = view.extent.ymin;
+  // var spRef = view.spatialReference; //Try this a few different ways
+  //
+  // view.on("click", function() {
+  //
+  //     xmax = view.extent.xmax;
+  //     xmin = view.extent.xmin;
+  //     ymax = view.extent.ymax;
+  //     ymin = view.extent.ymin;
+  //     spRef = view.spatialReference;
+  //
+  //
+  //   alert(`Extent: \n Xmax = ${xmax} \n Xmin = ${xmin} \n Ymax = ${ymax} \n Ymin ${ymin}`);
+  //   console.log(spRef);
+  // });
 
 
-// require([
-//   "esri/Map",
-//   "esri/views/MapView",
-//   "esri/layer/FeatureLayer",
-//   "dojo/domReady!"
-// ],
-//
-// function(Map, MapView, FeatureLayer){
-//   var map = new Map ({
-//     basemap: "hybrid"
-//   });
-//
-//   var view = new MapView({
-//     container: "Figure1",
-//     map:map,
-//
-//     extent: {
-//       //TODO Add Extent Coordinates
-//       xmin: 0,
-//       ymin: 0,
-//       xmax: 0,
-//       ymax: 0,
-//       spatialReference: 102100,
-//     }
-//   });
-//
-//   var parcelLayer = new FeatureLayer ({
-//     url: "" //TODO upload parcel layer to dev site
-//   });
-//
-//   var citiesLayer = new FeatureLayer ({
-//     url: "" //TODO upload cities layer to dev site
-//   });
-//
-//   var countiesLayer = new FeatureLayer ({
-//     url: "" //TODO upload counties layer
-//   });
-//
-//
+
 // map.add(parcelLayer);
-// map.add(citiesLayer);
-// map.add(countiesLayer);
-//
-//
-// });
-//
+map.add(citiesLayer);
+map.add(countiesLayer);
+
+
+});
+
+
+// Counties Figure 2
+
+require([
+  "esri/Map",
+  "esri/views/MapView",
+  "esri/layers/FeatureLayer",
+  "dojo/domReady!"
+],
+
+function (Map, MapView, FeatureLayer){
+  var map = new Map ({
+    basemap: "hybrid"
+  });
+
+  var view = new MapView({
+    container: "counties",
+    map:map,
+
+    extent: {
+      //TODO Add Extent Coordinates
+      xmin: 27046324,
+      ymin: 5322026,
+      xmax: 27168623,
+      ymax: 5444326,
+      spatialReference: 102100,
+    }
+  });
+
+
+  var countiesLayer = new FeatureLayer ({
+    url: "https://services8.arcgis.com/nwNGnvCfuuBjRuZt/arcgis/rest/services/adacan/FeatureServer" //TODO upload counties layer
+  });
+
+
+map.add(countiesLayer);
+
+
+});
+
+
+// Change Image 3
+// Land Use in the Treasure Valley 4
+
+// Counties and Impact Area 5
+require([
+  "esri/Map",
+  "esri/views/MapView",
+  "esri/layers/FeatureLayer",
+  "dojo/domReady!"
+],
+
+function (Map, MapView, FeatureLayer){
+  var map = new Map ({
+    basemap: "hybrid"
+  });
+
+  var view = new MapView({
+    container: "impact_area",
+    map:map,
+
+    extent: {
+      //TODO Add Extent Coordinates
+      xmin: 27046324,
+      ymin: 5322026,
+      xmax: 27168623,
+      ymax: 5444326,
+      spatialReference: 102100,
+    }
+  });
+
+
+  var countiesLayer = new FeatureLayer ({
+    url: "https://services8.arcgis.com/nwNGnvCfuuBjRuZt/arcgis/rest/services/impact/FeatureServer" //TODO upload counties layer
+  });
+  var impactLayer = new FeatureLayer ({
+    url: "https://services8.arcgis.com/nwNGnvCfuuBjRuZt/arcgis/rest/services/adacan/FeatureServer" //TODO upload counties layer
+  });
+
+
+map.add(countiesLayer);
+map.add(impactLayer);
+
+});
+
+
+// RDD Map 6
+
+
+
+
 // //Figure2 Map
 // //TODO Create a legend
 // //TODO Figure out label; my guess is that its done on the dev site

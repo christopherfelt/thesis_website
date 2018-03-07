@@ -52,13 +52,13 @@ body {
 #abstract_toc, #litReview_toc, #studyArea_toc, #theoryHyp_toc,
 #data_toc, #method_toc, #results_toc, #summary_toc {
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 
-#abstract_toc {
+/* #abstract_toc {
   background-color: lightblue;
-}
+} */
 
 
 
@@ -77,9 +77,10 @@ body {
 
 .header, .blueprint_section, .slide_show_paragraphs,
 .data, .method, #rdd_graph, .results {
-  background-color: rgba(85, 32, 0, .6);
-  color: white;
-  border: solid 2px rgba(85,32,0,1);
+  background-color: rgba(67, 70, 75, .9);
+  color: #D3D3D3;
+  border-radius: 5px;
+  border: solid 2px rgba(67, 70, 75, .9);
 
 
 }
@@ -95,7 +96,7 @@ body {
   padding-left: 20%;
   padding-right: 20%;
   z-index: 10;
-  border-radius: 5px;
+  /* border-radius: 5px; */
 
 }
 
@@ -107,8 +108,10 @@ body {
 
 
 
-#all_shapes, #counties, #change_image {
+#all_shapes, #counties, #change_image, #landuse,
+ #impact_area, #rdd_map{
   border: solid black;
+  padding: 0;
   margin: auto;
   height: 400px;
   width: 400px;
@@ -456,7 +459,7 @@ body {
 }
 
 #slideShowButLeft, #slideShowButRight {
-  background-color: rgba(85,32,0,1);
+  background-color: rgba(67, 70, 75, .6);
   color: white;
   border: none;
 }
@@ -570,6 +573,11 @@ body {
   border: 1px solid black;
   border-collapse: collapse;
   margin: auto;
+
+}
+
+#first_back_info{
+  display: block;
 }
 
 .back_info {
@@ -594,9 +602,11 @@ body {
   display: none;
 } */
 
+
+
 @media screen and (max-width: 1325px){
   .header h1{
-    font-size: 140%;
+    font-size: 135%;
   }
 }
 
@@ -613,8 +623,29 @@ body {
     width: 100%; */
     display: none;
   }
+  .slide_show_paragraphs{
+    height: 100%;
+  }
 
+  .footer {
+    display: none;
+  }
 
+  #rdd_img {
+    display: none;
+  }
+
+  .results table{
+    font-size: 75%;
+  }
+
+  .data table {
+    font-size: 50%;
+  }
+
+  .bp_small{
+    dislay: none;
+  }
 
   /* .grid {
     display: block;

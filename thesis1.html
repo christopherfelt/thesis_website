@@ -24,14 +24,14 @@
 
         <h3 id="abstract_toc" onclick = "window.scrollTo(0, 100)">Abstract</h3>
         <h3 id="litReview_toc" onclick = "window.scrollTo(0, 800)">Understanding Land Use Change </h3>
-        <h3 id="studyArea_toc" onclick = "window.scrollTo(0, 2800)">Study Area</h3>
+        <h3 id="studyArea_toc" onclick = "window.scrollTo(0, 2500)">Study Area</h3>
         <!-- <h4 id="bluePrint_toc" onclick = "window.scrollTo(0, 2400)">Blueprint for Good Growth</h4> -->
-        <h3 id="theoryHyp_toc" onclick = "window.scrollTo(0, 3400)">Theory and Hypothesis</h3>
-        <h3 id="data_toc" onclick = "window.scrollTo(0, 4100)">Data</h3>
-        <h3 id="method_toc" onclick = "window.scrollTo(0, 8500)">Method</h3>
+        <h3 id="theoryHyp_toc" onclick = "window.scrollTo(0, 3300)">Theory and Hypothesis</h3>
+        <h3 id="data_toc" onclick = "window.scrollTo(0, 4000)">Data</h3>
+        <h3 id="method_toc" onclick = "window.scrollTo(0, 8200)">Method</h3>
         <!-- <h4 id="rdd_toc" onclick = "window.scrollTo(0, 8200)">Regression Discontinuity Design</h4> -->
           <!-- <h4 id="models_toc">Models</h4> -->
-        <h3 id="results_toc" onclick = "window.scrollTo(0, 11100)">Results</h3>
+        <h3 id="results_toc" onclick = "window.scrollTo(0, 10700)">Results</h3>
         <h3 id="summary_toc" onclick = "window.scrollTo(0, 13800)">Summary of Results</h3>
 
 
@@ -52,7 +52,7 @@
 <br><br>
 
   <div id="all_shapes">
-      <h1>Figure 1</h1>
+      <!-- <h1>All Shapes</h1> -->
   </div>
 
 
@@ -104,7 +104,7 @@
 
 
     <div id="counties">
-      <h1>Counties</h1>
+      <!-- <h1>Counties</h1> -->
       <!-- <img class="counties" src="counties.png" alt=""><br> -->
     </div>
 
@@ -556,7 +556,7 @@
 
     <!-- change to figure -->
     <div id="impact_area">
-      <h1>Figure 5: County and City Impact Area</h1>
+      <!-- <h1>County and City Impact Area</h1> -->
     </div>
 
     <p>
@@ -604,7 +604,7 @@
         </ul>
       </ul>
 
-      <img src="rdd1.png" alt="">
+      <img id="rdd_img" src="rdd1.png" alt="">
     </div>
 
     <p>
@@ -1371,19 +1371,19 @@
 
 
     <div class="box footer">
-      <h3>Background Information</h3>
+      <h3 id='check_pos' >Technical Information</h3>
       <!-- <h1>Stuff in here about technology that I used for my research</h1> -->
-      <p class="back_info"> Stuff 1</p>
-      <p class="back_info"> Stuff 2</p>
-      <p class="back_info"> Stuff 3</p>
-      <p class="back_info"> Stuff 4</p>
-      <p class="back_info"> Stuff 5</p>
-      <p class="back_info"> Stuff 6</p>
+      <p id="first_back_info" class="back_info"> I design this website for practice and to present the research I did for my masters thesis.  This section will describe the technologies that I used for this website and in my research. If you are interested in looking at the code behind this website, check out the repository on my <a href="https://github.com/christopherfelt/thesis_website"><strong>GitHub</strong></a> profile  </p>
+      <p class="back_info"> There are several maps presented throughout the website that are interactive. In my research, I utilized ESRI's ArcMap extenstively. To include the maps in this website, I utlized the ArcGIS JavaScript API </p>
+      <p class="back_info"> The animated content in website is built with vanilla (plain/no jquery) javascript. I also did not use a CSS framework such as Bootstrap. The styling and responsiveness is custom for this website.</p>
+      <p class="back_info"> To create the datasets for my research, I used various functionality in to edit and merge the source data.  In addition to ArcMap, I also utlized a third party GIS software package called Geospatial Modeling Environment.  I used this package to create the land use change varaibles.  </p>
+      <p class="back_info">For the stastical analysis, I used STATA and R. I used STATA to perform the multinomial and logitistic regressions and calculate the marginal effects. I used R to perform additional analysis such as rare logistic regressions. </p>
+      <p class="back_info"> Summary of Technologies: <br> HTML, CSS, JS, ArcGIS JS API, ArcMap, STATA, R</p>
 
 
 
     </div>
-
+    <script src="https://js.arcgis.com/4.6/"></script>
     <script type="text/javascript" src="thesis1.js"></script>
 
 
